@@ -1,0 +1,2 @@
+note 1 : read file 
+note 2 : delete file 
