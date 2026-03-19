@@ -2,26 +2,28 @@ const path=require("path")
 const fs=require("fs")
 const event=require("events")
 const os=require("os")
-const console = require("console")
 // QUESTION (1)
-// console.log(__filename)
+// console.log({
+//     File : __filename,
+//     Dir:__dirname
+// })
 // QUESTION (2)
-// let pathFile=__filename
+// let pathFile="/user/files/report.pdf"
 // console.log(path.basename(pathFile))
 // QUESTION (3)
-// let pathFile=__filename
-// console.log(path.parse(pathFile))
+// let pathFile=path.format( { dir: "/folder", name: "app", ext: ".js"})
+// console.log(pathFile)
 // QUESTION (4)
-// let pathFile=__filename
+// let pathFile="/docs/readme.md"
 // console.log(path.extname(pathFile))
 // QUESTION (5)
-// let pathFile=path.parse(__filename)
+// let pathFile=path.parse("/home/app/main.js")
 // console.log({
 //     Name:pathFile.name,
 //     Ext:pathFile.ext
 // })
 // QUESTION (6)
-// let pathFile=__filename
+// let pathFile="/home/user/file.txt"
 // console.log(path.isAbsolute(pathFile))
 // QUESTION (7)
 // console.log(path.join("src","components","App.js"))
@@ -40,8 +42,12 @@ const console = require("console")
 // }
 // })
 // QUESTION (11)
+// try {
 // fs.mkdirSync("./folder")
-// console.log("SCCUESS")
+// console.log("SCCUESS")  
+// } catch (error) {
+//     console.log("FOLDER HAS BEEN ALREADY !")
+// }
 // QUESTION (12)
 // let newEvent=new event()
 // newEvent.on("start",()=>{
@@ -55,9 +61,9 @@ const console = require("console")
 // })
 // newEvent.emit("login","ahmed")
 // QUESTION (14)
-// let filePath=path.resolve("./notes.txt")
 // try {
-//    let fileData=readFileSync(filePath,{encoding:"utf8"})
+//    const filePath = path.resolve(__dirname, "notes.txt");
+//    let fileData=fs.readFileSync(filePath,{encoding:"utf8"})
 //    console.log(fileData) 
 // } catch (error) {
 //   console.log("PATH IS NOT FOUND !")  
