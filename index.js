@@ -3,51 +3,88 @@ const fs=require("fs")
 const event=require("events")
 const os=require("os")
 // QUESTION (1)
-// console.log({
+// function getCurrentPath(){
+//     console.log({
 //     File : __filename,
-//     Dir:__dirname
+//     Dir:   __dirname
 // })
+// }
+// getCurrentPath()
 // QUESTION (2)
 // let pathFile="/user/files/report.pdf"
-// console.log(path.basename(pathFile))
+// function getFileName(filePath){
+//     console.log(path.basename(filePath))
+    
+
+// }
+// getFileName(pathFile)
 // QUESTION (3)
-// let pathFile=path.format( { dir: "/folder", name: "app", ext: ".js"})
-// console.log(pathFile)
+// function createFilePath() {
+//     const pathFile = path.format({
+//         dir: "/folder",
+//         name: "app",
+//         ext: ".js"
+//     });
+//     console.log(pathFile);
+// }
+// createFilePath();
 // QUESTION (4)
-// let pathFile="/docs/readme.md"
-// console.log(path.extname(pathFile))
+// function parseFilePath(filePath) {
+//     return path.parse(filePath);
+// }
+// console.log(parseFilePath("/docs/readme.md"));
 // QUESTION (5)
-// let pathFile=path.parse("/home/app/main.js")
-// console.log({
-//     Name:pathFile.name,
-//     Ext:pathFile.ext
-// })
+// function getFileInfo(filePath) {
+//     const pathFile = path.parse(filePath);
+//     console.log({
+//         Name: pathFile.name,
+//         Ext: pathFile.ext
+//     });
+// }
+// getFileInfo("/home/app/main.js");
 // QUESTION (6)
-// let pathFile="/home/user/file.txt"
-// console.log(path.isAbsolute(pathFile))
+// function checkIfAbsolute(filePath) {
+//     return path.isAbsolute(filePath);
+// }
+// console.log(checkIfAbsolute("/home/user/file.txt"));
 // QUESTION (7)
-// console.log(path.join("src","components","App.js"))
+// function buildPath(...segments) {
+//     return path.join(...segments);
+// }
+// console.log(buildPath("src", "components", "App.js"));
 // QUESTION (8)
-// console.log(path.resolve("./index.js"))
+// function resolvePath(filePath) {
+//     return path.resolve(filePath);
+// }
+// console.log(resolvePath("./index.js"));
 // QUESTION (9)
-// console.log(path.join("/folder1, folder2/file.txt","/folder1/folder2/file.txt"))
+// function joinPaths() {
+//     return path.join("/folder1", "folder2", "file.txt");
+// }
+// console.log(joinPaths());
 // QUESTION (10)
-// const filePath=path.resolve("file.txt")
-// fs.unlink(filePath,(error)=>{
-// if(error){
-//     console.log("PATH IS NOT FOUND !")
+// function deleteFile(fileName) {
+//     const filePath = path.resolve(fileName);
+//     fs.unlink(filePath, (error) => {
+//         if (error) {
+//             console.log("PATH IS NOT FOUND !");
+//         } else {
+//             console.log(`${fileName} IS DELETED !`);
+//         }
+//     });
 // }
-// else{
-//     console.log(`THE file.txt IS DELETED !`)
-// }
-// })
+// deleteFile("file.txt");
 // QUESTION (11)
-// try {
-// fs.mkdirSync("./folder")
-// console.log("SCCUESS")  
-// } catch (error) {
-//     console.log("FOLDER HAS BEEN ALREADY !")
+// function createFolder(folderName) {
+//     try {
+//         fs.mkdirSync(folderName);
+//         console.log("SUCCESS");
+//     } catch (error) {
+//         console.log("FOLDER HAS BEEN ALREADY !");
+//     }
 // }
+
+// createFolder("./folder");
 // QUESTION (12)
 // let newEvent=new event()
 // newEvent.on("start",()=>{
